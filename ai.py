@@ -9,4 +9,5 @@ class AI:
 
     def display_choice(self):
         ai_choice= random.choice(self.choice_list)
-        print(f" AI has chosen {ai_choice}")
+        print(f"AI has chosen {ai_choice}.")
+        return ai_choice  

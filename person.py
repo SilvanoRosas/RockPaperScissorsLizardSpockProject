@@ -1,3 +1,4 @@
+import time
 class Person:
 
     def __init__(self):
@@ -5,10 +6,19 @@ class Person:
 
 
     def display_choice(self):
-        print("Choose 0 for Rock")
-        print("Choose 1 for Paper")
-        print("Choose 2 for Scissors")
-        print("Choose 3 for Lizard")
-        print("Choose 4 for Spock")
+        print(" ")
+        print("Choose 0 for ROCK")
+        print("Choose 1 for PAPER")
+        print("Choose 2 for SCISSORS")
+        print("Choose 3 for LIZARD")
+        print("Choose 4 for SPOCK")
 
-        self.person_choice= input("Choose your Gesture")
+        self.person_choice= input("Choose your Gesture.")
+
+        while self.person_choice not in ('0','1','2','3','4'):
+         self.person_choice= input("Choose your Gesture.")   
+
+        
+
+        print(f"Player has chosen {self.choice_list[int(self.person_choice)]}")
+        return self.choice_list[int(self.person_choice)]
